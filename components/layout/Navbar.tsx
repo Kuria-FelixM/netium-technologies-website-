@@ -70,7 +70,7 @@ export function Navbar() {
             </div>
 
             <Link href="/contact">
-              <Button className="bg-primary hover:bg-blue-700 text-white px-6 py-3 font-semibold">
+              <Button className="bg-primary hover:bg-blue-700 text-white px-8 py-5 font-semibold text-lg">
                 Get Started
               </Button>
             </Link>
