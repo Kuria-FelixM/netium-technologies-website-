@@ -10,7 +10,7 @@ export function AboutSection() {
           {/* Left Column - Image */}
           <div className="relative">
             <Image
-              src="/about-illustration.png"
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&auto=format&fit=crop"
               alt="Netium team collaborating on cybersecurity solutions"
               width={500}
               height={400}

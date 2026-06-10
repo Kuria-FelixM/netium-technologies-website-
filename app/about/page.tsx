@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import { Metadata } from 'next'
-import { Shield, Zap, Heart, Target, Users, Globe } from 'lucide-react'
+import { Shield, Zap, Heart, Target, Users, Globe, Award, BadgeCheck, FileCheck } from 'lucide-react'
 import { Container } from '@/components/Container'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
+import { Breadcrumb } from '@/components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: 'About Netium Technologies | Our Story, Mission & Team',
@@ -48,46 +49,26 @@ export default function AboutPage() {
     },
   ]
 
-  const teamMembers = [
-    {
-      name: 'Founder & CEO',
-      title: 'Cybersecurity Strategy & Leadership',
-      expertise: 'Enterprise security architecture, threat intelligence, risk management',
-      image: '/team-member-1.png',
-    },
-    {
-      name: 'Cloud & Infrastructure Lead',
-      title: 'Cloud Advisory & Infrastructure Security',
-      expertise: 'AWS, Azure, GCP, cloud security, infrastructure design',
-      image: '/team-member-2.png',
-    },
-    {
-      name: 'Compliance & Governance Lead',
-      title: 'Regulatory Compliance & Governance',
-      expertise: 'ISO 27001, NIST, HIPAA, compliance frameworks, audit',
-      image: '/team-member-3.png',
-    },
-  ]
-
   return (
     <>
       <Navbar />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'About Us' }]} />
       
       {/* Hero Section */}
-      <section className="bg-secondary text-white py-20 md:py-32">
+      <section className="bg-secondary text-white pt-8 pb-8 overflow-hidden">
         <Container>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Story</h1>
-              <p className="text-xl text-white text-opacity-90 mb-8">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Our Story</h1>
+              <p className="text-base sm:text-lg text-white text-opacity-90 mb-6">
                 Netium Technologies was founded with a simple mission: to make cybersecurity accessible and effective for organizations across Kenya. We recognized a critical gap in the market—many organizations, from startups to enterprises, lacked access to trusted, expert cybersecurity guidance tailored to their unique needs.
               </p>
-              <p className="text-lg text-white text-opacity-80">
+              <p className="text-base sm:text-lg text-white text-opacity-80">
                 What started as a vision has grown into a trusted partner for dozens of organizations navigating the complex digital security landscape. We bring years of combined experience in cybersecurity, cloud infrastructure, and regulatory compliance to every engagement.
               </p>
             </div>
             <Image
-              src="/about-hero.png"
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&auto=format&fit=crop"
               alt="Netium Technologies team"
               width={500}
               height={400}
@@ -142,33 +123,60 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Team Section */}
+      {/* Credentials & Expertise Section */}
       <section className="py-20 md:py-24 bg-background">
         <Container>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Expert Team</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Backed by Certified Expertise</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Meet the experienced professionals dedicated to securing your digital future.
+              Our team holds internationally recognized certifications and deep local knowledge of Kenya's regulatory environment.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-card border border-border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={300}
-                  height={300}
-                  className="w-full h-64 object-cover bg-muted"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-1">{member.name}</h3>
-                  <p className="text-primary font-semibold mb-3">{member.title}</p>
-                  <p className="text-muted-foreground text-sm">{member.expertise}</p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* ISO 27001 Certified */}
+            <div className="bg-card border border-border rounded-lg p-8 hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-blue-50">
+                  <Award className="w-6 h-6 text-blue-600" />
                 </div>
               </div>
-            ))}
+              <h3 className="text-lg font-bold text-foreground mb-2">ISO 27001 Certified</h3>
+              <p className="text-muted-foreground">International standard for information security management systems.</p>
+            </div>
+
+            {/* AWS & Azure Certified */}
+            <div className="bg-card border border-border rounded-lg p-8 hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-blue-50">
+                  <BadgeCheck className="w-6 h-6 text-blue-600" />
+                </div>
+              </div>
+              <h3 className="text-lg font-bold text-foreground mb-2">AWS & Azure Certified</h3>
+              <p className="text-muted-foreground">Certified solutions architects across major cloud platforms.</p>
+            </div>
+
+            {/* CISM Certified */}
+            <div className="bg-card border border-border rounded-lg p-8 hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-blue-50">
+                  <Shield className="w-6 h-6 text-blue-600" />
+                </div>
+              </div>
+              <h3 className="text-lg font-bold text-foreground mb-2">CISM Certified</h3>
+              <p className="text-muted-foreground">Certified Information Security Manager — globally recognized expertise.</p>
+            </div>
+
+            {/* Kenya Data Protection Act */}
+            <div className="bg-card border border-border rounded-lg p-8 hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-blue-50">
+                  <FileCheck className="w-6 h-6 text-blue-600" />
+                </div>
+              </div>
+              <h3 className="text-lg font-bold text-foreground mb-2">Kenya Data Protection Act</h3>
+              <p className="text-muted-foreground">Specialists in local compliance with Kenya's Data Protection Act 2019.</p>
+            </div>
           </div>
         </Container>
       </section>

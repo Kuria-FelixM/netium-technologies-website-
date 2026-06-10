@@ -52,12 +52,12 @@ export function HeroSection() {
           {/* Right side - Hero Image */}
           <div className="hidden lg:flex justify-center items-center">
             <Image
-              src="/hero-illustration.png"
-              alt="Cybersecurity and digital protection illustration"
+              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
+              alt="Team working on cybersecurity solutions"
               width={500}
               height={500}
               priority
-              className="w-full max-w-md drop-shadow-2xl"
+              className="w-full max-w-md drop-shadow-2xl rounded-lg"
             />
           </div>
         </div>

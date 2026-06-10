@@ -32,8 +32,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-white text-opacity-80 hover:text-opacity-100 transition-all text-sm">
-                  Home
+                <Link href="/services/cloud" className="text-white text-opacity-80 hover:text-opacity-100 transition-all text-sm">
+                  Cloud Advisory
                 </Link>
               </li>
               <li>

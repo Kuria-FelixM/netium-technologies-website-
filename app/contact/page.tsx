@@ -1,6 +1,8 @@
+import Image from 'next/image'
 import { Metadata } from 'next'
 import { ContactSection } from '@/components/sections/ContactSection'
 import { Navbar } from '@/components/layout/Navbar'
+import { Breadcrumb } from '@/components/Breadcrumb'
 import { Footer } from '@/components/layout/Footer'
 import { Container } from '@/components/Container'
 import { Mail, Phone, MapPin, Clock, Plus } from 'lucide-react'
@@ -33,15 +35,27 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
       
       {/* Hero Section */}
-      <section className="bg-secondary text-white py-16 md:py-24">
+      <section className="bg-secondary text-white pt-8 pb-8 overflow-hidden">
         <Container>
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h1>
-            <p className="text-xl text-white text-opacity-90">
-              Have questions about our cybersecurity and cloud advisory services? We&apos;re here to help. Reach out today for a free consultation.
-            </p>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Get In Touch</h1>
+              <p className="text-base sm:text-lg text-white text-opacity-90">
+                Have questions about our cybersecurity and cloud advisory services? We&apos;re here to help. Reach out today for a free consultation with our expert team in Nairobi.
+              </p>
+            </div>
+            <div className="hidden md:flex justify-center items-center">
+              <Image
+                src="https://images.unsplash.com/photo-1516534775068-bb6c7330a406?w=1200&auto=format&fit=crop"
+                alt="Contact Netium Technologies team"
+                width={500}
+                height={400}
+                className="w-full max-w-md rounded-lg shadow-xl"
+              />
+            </div>
           </div>
         </Container>
       </section>

@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Container } from '@/components/Container'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
+import { Breadcrumb } from '@/components/Breadcrumb'
 
 export default function CybersecurityPage() {
   const services = [
@@ -77,26 +78,27 @@ export default function CybersecurityPage() {
   return (
     <>
       <Navbar />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '#' }, { label: 'Cybersecurity Services' }]} />
 
       {/* Hero Section */}
-      <section className="bg-secondary text-white py-16 md:py-32">
+      <section className="bg-secondary text-white pt-8 pb-8 overflow-hidden">
         <Container>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Cybersecurity Services</h1>
-              <p className="text-xl text-white text-opacity-90 mb-8">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Cybersecurity Services</h1>
+              <p className="text-base sm:text-lg text-white text-opacity-90 mb-6">
                 Protect your organization from evolving cyber threats with our comprehensive cybersecurity solutions. From assessments to incident response, we help you build a resilient security posture.
               </p>
               <Button
                 onClick={scrollToContact}
-                className="bg-white text-secondary hover:bg-gray-100 px-8 py-4 text-lg font-bold flex items-center gap-2"
+                className="bg-white text-secondary hover:bg-gray-100 px-6 py-6 text-lg font-bold flex items-center gap-2 rounded-lg"
               >
                 Get Free Assessment
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </div>
             <Image
-              src="/cybersecurity-hero.png"
+              src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&auto=format&fit=crop"
               alt="Cybersecurity Services"
               width={500}
               height={400}

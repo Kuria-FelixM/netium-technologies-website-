@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+import { WhatsAppButton } from '@/components/WhatsAppButton'
 import './globals.css'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
@@ -46,7 +47,12 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} bg-background`}>
       <body className="font-sans antialiased bg-background text-foreground">
         {children}
+        <WhatsAppButton />
         {process.env.NODE_ENV === 'production' && <Analytics />}
+        {/* TODO: Add Google Analytics GA4 tag here before going live
+            Replace GA_MEASUREMENT_ID with your actual GA4 measurement ID
+            <Script src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" />
+        */}
       </body>
     </html>
   )

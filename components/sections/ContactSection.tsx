@@ -48,7 +48,7 @@ export function ContactSection() {
           {/* Left Column - Contact Information & Image */}
           <div>
             <Image
-              src="/contact-illustration.png"
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop"
               alt="Netium Technologies contact us"
               width={500}
               height={400}
