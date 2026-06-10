@@ -12,8 +12,8 @@ export function Footer() {
       <Container className="py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
+          <div className="text-center md:text-left">
+            <div className="flex items-center gap-2 mb-4 md:justify-start justify-center">
               <Shield className="w-6 h-6" />
               <span className="font-bold text-xl">Netium</span>
             </div>
@@ -23,7 +23,7 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
@@ -50,7 +50,7 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2">
               <li>
@@ -77,20 +77,20 @@ export function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="font-semibold text-white mb-4">Contact Info</h4>
             <ul className="space-y-3">
-              <li className="flex items-start gap-2">
+              <li className="flex items-start gap-2 md:justify-start justify-center">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <span className="text-white text-opacity-80 text-sm">Applewood Adams, Nairobi, Kenya</span>
               </li>
-              <li className="flex items-start gap-2">
+              <li className="flex items-start gap-2 md:justify-start justify-center">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <a href="mailto:info@netiumtechnologies.com" className="text-white text-opacity-80 hover:text-opacity-100 transition-all text-sm">
                   info@netiumtechnologies.com
                 </a>
               </li>
-              <li className="flex items-start gap-2">
+              <li className="flex items-start gap-2 md:justify-start justify-center">
                 <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <a href="tel:+254721939393" className="text-white text-opacity-80 hover:text-opacity-100 transition-all text-sm">
                   +254 721 939 393

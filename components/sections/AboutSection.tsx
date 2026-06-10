@@ -8,7 +8,7 @@ export function AboutSection() {
       <Container>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Image */}
-          <div className="relative">
+          <div className="relative order-2 md:order-1">
             <Image
               src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&auto=format&fit=crop"
               alt="Netium team collaborating on cybersecurity solutions"
@@ -19,7 +19,7 @@ export function AboutSection() {
           </div>
 
           {/* Right Column - Content */}
-          <div>
+          <div className="order-1 md:order-2 text-center md:text-left">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">About Netium Technologies</h2>
 
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
@@ -29,7 +29,7 @@ export function AboutSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
               {/* Mission Card */}
               <div className="bg-blue-50 rounded-lg p-6 border border-blue-100">
-                <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2 md:justify-start justify-center">
                   <CheckCircle className="w-5 h-5 text-primary" />
                   Our Mission
                 </h3>
@@ -40,7 +40,7 @@ export function AboutSection() {
 
               {/* Vision Card */}
               <div className="bg-blue-50 rounded-lg p-6 border border-blue-100">
-                <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2 md:justify-start justify-center">
                   <CheckCircle className="w-5 h-5 text-primary" />
                   Our Vision
                 </h3>
@@ -50,7 +50,7 @@ export function AboutSection() {
               </div>
             </div>
 
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed text-center md:text-left">
               Founded on principles of collaboration, transparency, and continuous learning, we partner with our clients to build security strategies that align with their unique business goals.
             </p>
           </div>

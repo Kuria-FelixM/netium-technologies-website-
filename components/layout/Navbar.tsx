@@ -89,13 +89,13 @@ export function Navbar() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden border-t border-border py-4">
-            <div className="space-y-2">
+            <div className="space-y-2 text-center">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="block w-full text-left px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded transition-colors"
+                  className="block w-full text-center px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded transition-colors"
                 >
                   {item.label}
                 </Link>
