@@ -58,7 +58,7 @@ export default function AboutPage() {
       <section className="bg-secondary text-white pt-8 pb-8 overflow-hidden">
         <Container>
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
+            <div className="text-center md:text-left">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Our Story</h1>
               <p className="text-base sm:text-lg text-white text-opacity-90 mb-6">
                 Netium Technologies was founded with a simple mission: to make cybersecurity accessible and effective for organizations across Kenya. We recognized a critical gap in the market—many organizations, from startups to enterprises, lacked access to trusted, expert cybersecurity guidance tailored to their unique needs.

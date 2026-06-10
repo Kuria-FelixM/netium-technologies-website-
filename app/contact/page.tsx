@@ -41,7 +41,7 @@ export default function ContactPage() {
       <section className="bg-secondary text-white pt-8 pb-8 overflow-hidden">
         <Container>
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
+            <div className="text-center md:text-left">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Get In Touch</h1>
               <p className="text-base sm:text-lg text-white text-opacity-90">
                 Have questions about our cybersecurity and cloud advisory services? We&apos;re here to help. Reach out today for a free consultation with our expert team in Nairobi.

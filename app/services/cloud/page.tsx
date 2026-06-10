@@ -91,7 +91,7 @@ export default function CloudPage() {
       <section className="bg-secondary text-white pt-8 pb-8 overflow-hidden">
         <Container>
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
+            <div className="text-center md:text-left">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Cloud Advisory Services</h1>
               <p className="text-base sm:text-lg text-white text-opacity-90 mb-6">
                 Transform your infrastructure with secure, scalable cloud solutions. From strategy to implementation, we guide your cloud journey with expertise in AWS, Azure, and GCP.

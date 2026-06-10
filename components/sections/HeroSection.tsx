@@ -24,7 +24,7 @@ export function HeroSection() {
       <Container className="relative z-10 py-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left side - Text content */}
-          <div>
+          <div className="text-center md:text-left">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4 text-balance">
               Secure Your Digital Future Today
             </h1>
